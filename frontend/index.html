@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/all.min.css">
+    <link rel="shortcut icon" href="assets/images/task.png" type="image/png">
+</head>
+<body>
+    <div class="container my-3">
+        <!-- cabeçalho -->
+        <div class="row mb-4">
+            <div class="col ">
+                <div class="d-flex justify-content-start">
+                    <img src="assets/images/todo.png" alt="logo" class="img-fluid me-2 " width="50px">
+                    <h1>Lista de Tarefas</h1>
+    
+                </div>
+            </div>
+            <div class="col text-end">
+                <div class="d-flex justify-content-end">
+                    <select id="select-filter" class="form-select me-2 w-50">
+                        <option value="1"></option>
+                        <option value="2">tarefa1</option>
+                    </select>
+                    <a href="new_task.html" class="btn btn-primary "><i class="fa-solid fa-plus me-2"></i>Nova Tarefa</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!--aspecto visual do conteudo -->
+        <div class="row mb-3">
+            <div class="col-12 border border-secondary rounded p-3 shadow">
+    
+                <div class="row align-items-center">
+                    <div class="col-6"> <i class="fa-solid fa-circle-chevron-right me-2 text-info "></i>texto tarefa</div>
+                    <div class="col-2">
+    
+                        <select id="tasks_status" class="form-select w-15 p-1">
+                            <option value="new">New</option>
+                            <option value="in progress">In progress</option>
+                            <option value="3">Canceled</option>
+                            <option value="4">Done</option>
+                        </select>
+    
+                    </div>
+                    <div class="col-2 text-end"><i class="fa-solid fa-pen me-2"></i>Edit</div>
+                    <div class="col-2 text-end text-danger "><i class="fa-regular fa-trash-can me-2"></i>Delete</div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <!-- total de tarefas -->
+        <div class="row">
+            <div class="col ">Tarefas: <span class="text-info">1</span></div>
+        </div>
+        <!-- botao no tasks  -->
+        <div class="row " id="no_tasks">
+            <div class="col text-center">
+                <span class="opacity-75">Não existem tarefas para apresentar
+    
+                </span>
+            </div>
+        </div>
+        <hr>
+        <!-- footer -->
+        <div class="row">
+            <div class="col text-center">Pojeto Fullstack &copy; <span class="text-info">2023</span></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="assets/js/bootswatch.com__vendor_bootstrap_dist_js_bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<!-- 
+    > ver tarefas
+    titulo
+    filtro para escolher tarefas que queremos ver (select)
+    botao para adicionar tarefas 
+    (mensagem sobre o fato de não existirem tarefas)
+    caixa para tarefas 
+        - possibilidade de alterar o status, editar tarefa e elimina-las 
+        - paragrafo com o total de tarefas disponiveis (de acordo com o filtro)
+ -->
