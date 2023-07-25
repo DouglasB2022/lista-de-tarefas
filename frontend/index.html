@@ -6,6 +6,7 @@
     <title>Lista de Tarefas</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fontawesome/all.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
     <link rel="shortcut icon" href="assets/images/task.png" type="image/png">
 </head>
 <body>
@@ -29,36 +30,30 @@
                 </div>
             </div>
         </div>
-        <hr>
+        <hr class="my-3">
+        <h4 class="m-0 p-0 text-info"><i class="fa-solid fa-user-tie"><span class="ms-2" id="username"></span></i></h4>
+        <hr class="my-3">
+
+        
         <!--aspecto visual do conteudo -->
-        <div class="row mb-3">
-            <div class="col-12 border border-secondary rounded p-3 shadow">
-    
-                <div class="row align-items-center">
-                    <div class="col-6"> <i class="fa-solid fa-circle-chevron-right me-2 text-info "></i>texto tarefa</div>
-                    <div class="col-2">
-    
-                        <select id="tasks_status" class="form-select w-15 p-1">
-                            <option value="new">New</option>
-                            <option value="in progress">In progress</option>
-                            <option value="3">Canceled</option>
-                            <option value="4">Done</option>
-                        </select>
-    
-                    </div>
-                    <div class="col-2 text-end"><i class="fa-solid fa-pen me-2"></i>Edit</div>
-                    <div class="col-2 text-end text-danger "><i class="fa-regular fa-trash-can me-2"></i>Delete</div>
-                </div>
-            </div>
-    
+        <div class="" id="tasks_container">
+            <!-- conforme as tarefas vierem do nosso banco de dados, serao renderizadas na tela pelo foreach -->
+        
         </div>
-    
+            
         <!-- total de tarefas -->
-        <div class="row">
-            <div class="col ">Tarefas: <span class="text-info">1</span></div>
-        </div>
-        <!-- botao no tasks  -->
-        <div class="row " id="no_tasks">
+        
+        <!-- caso a length tarefas seja igual a 0,a classe d-none será renderizada na tela  -->
+        
+            <div class="row" id="total_tasks">
+                <div class="col">Tarefas: <span class="text-info" >6</span></div>
+            </div>
+        
+        <!--  no tasks  -->
+
+        <!-- caso a length tarefas seja igual a 0, a classe d-none será removida da tela mostrando a frase -->
+        
+        <div class="row d-none" id="no_tasks">
             <div class="col text-center">
                 <span class="opacity-75">Não existem tarefas para apresentar
     
@@ -68,7 +63,9 @@
         <hr>
         <!-- footer -->
         <div class="row">
-            <div class="col text-center">Pojeto Fullstack &copy; <span class="text-info">2023</span></div>
+            <div class="col text-center">Pojeto Fullstack &copy; 
+                <span class="text-info">2023</span>
+            </div>
         </div>
     </div>
 
@@ -79,16 +76,7 @@
 
 
     <script src="assets/js/bootswatch.com__vendor_bootstrap_dist_js_bootstrap.bundle.min.js"></script>
+    <script src="assets/js/app1.js"></script>
 </body>
 </html>
 
-<!-- 
-    > ver tarefas
-    titulo
-    filtro para escolher tarefas que queremos ver (select)
-    botao para adicionar tarefas 
-    (mensagem sobre o fato de não existirem tarefas)
-    caixa para tarefas 
-        - possibilidade de alterar o status, editar tarefa e elimina-las 
-        - paragrafo com o total de tarefas disponiveis (de acordo com o filtro)
- -->
